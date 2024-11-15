@@ -3,26 +3,7 @@
 <body>
     <h1>📚 Library Database Analysis Project</h1>
     <p>Welcome to the <b>Library Database Analysis Project</b>! This repository contains a Python program to analyze a library's collection of books, providing insights into genres, authors, publication years, and availability.</p>
-
-    <h2>🚀 Features</h2>
-    <ul>
-        <li><b>Count Available Books</b>: Determine how many books are available for borrowing.</li>
-        <li><b>Unique Genres</b>: Identify all genres in the library's collection.</li>
-        <li><b>Search by Author</b>: Find all books written by a specific author.</li>
-        <li><b>Books by Publication Year</b>: Get a count of books published each year.</li>
-        <li><b>Oldest and Newest Books</b>: Identify the oldest and newest books in the library.</li>
-        <li><b>Filter by Availability</b>: View books based on their availability status.</li>
-        <li><b>Filter by Genre</b>: View books belonging to a specific genre.</li>
-    </ul>
-
-    <h2>🛠️ Technologies Used</h2>
-    <ul>
-        <li><b>Python</b>: Core logic of the application.</li>
-        <li><b>Markdown</b>: For project documentation.</li>
-        <li><b>HTML/CSS</b>: Styling for a GitHub-friendly view.</li>
-    </ul>
-
-    <h2>📂 Project Structure</h2>
+<h2>📂 Project Structure</h2>
     <pre>
 ├── library_analysis.py    # Python script containing the core logic.
 ├── README.md              # Project documentation (this file).
