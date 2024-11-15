@@ -7,23 +7,7 @@
     <pre>
 ├── library_analysis.py    # Python script containing the core logic.
 ├── README.md              # Project documentation (this file).
-    </pre>
-
-    <h2>📖 How to Run the Project</h2>
-    <h3>Prerequisites</h3>
-    <p>Ensure you have Python installed on your system. If not, download it from <a href="https://www.python.org/" target="_blank">Python's official site</a>.</p>
-
-    <h3>Steps</h3>
-    <ol>
-        <li>Clone this repository:</li>
-        <pre><code>git clone https://github.com/mairaperveen/library-database-analysis.git
-cd library-database-analysis</code></pre>
-        <li>Run the script:</li>
-        <pre><code>python library_analysis.py</code></pre>
-    </ol>
-
-    <h2>🔍 Example Output</h2>
-    <pre>
+    
 Library Database Analysis
 
 Number of Available Books: 4
