@@ -1,125 +1,104 @@
-Library Database Analysis
-This project is a Python-based program designed to analyze a library's book collection. The script organizes, processes, and extracts insights from a fictional library database, containing book details such as title, author, genre, publication year, and availability status. The results are presented in a user-friendly format.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Database Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #eef;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Library Database Analysis Project</h1>
+    <p>Welcome to the <b>Library Database Analysis Project</b>! This repository contains a Python program to analyze a library's collection of books, providing insights into genres, authors, publication years, and availability.</p>
 
-Project Overview
-This project covers:
+    <h2>🚀 Features</h2>
+    <ul>
+        <li><b>Count Available Books</b>: Determine how many books are available for borrowing.</li>
+        <li><b>Unique Genres</b>: Identify all genres in the library's collection.</li>
+        <li><b>Search by Author</b>: Find all books written by a specific author.</li>
+        <li><b>Books by Publication Year</b>: Get a count of books published each year.</li>
+        <li><b>Oldest and Newest Books</b>: Identify the oldest and newest books in the library.</li>
+        <li><b>Filter by Availability</b>: View books based on their availability status.</li>
+        <li><b>Filter by Genre</b>: View books belonging to a specific genre.</li>
+    </ul>
 
-Data Collection: Storing book data in a structured format using lists and dictionaries.
-Data Analysis: Performing analyses to count available books, list unique genres, filter by author, count books by year, and identify oldest/newest books.
-Data Visualization: Displaying results in a clear format for easy interpretation.
-Requirements
-Python 3.x
-No external libraries are required for this project.
+    <h2>🛠️ Technologies Used</h2>
+    <ul>
+        <li><b>Python</b>: Core logic of the application.</li>
+        <li><b>Markdown</b>: For project documentation.</li>
+        <li><b>HTML/CSS</b>: Styling for a GitHub-friendly view.</li>
+    </ul>
 
-Project Structure
-The main file for this project is library_analysis.py, which contains:
+    <h2>📂 Project Structure</h2>
+    <pre>
+├── library_analysis.py    # Python script containing the core logic.
+├── README.md              # Project documentation (this file).
+    </pre>
 
-Functions for data analysis.
-Script to visualize and print results.
-Dataset
-The dataset is created as a list of dictionaries, where each dictionary represents a book and includes:
+    <h2>📖 How to Run the Project</h2>
+    <h3>Prerequisites</h3>
+    <p>Ensure you have Python installed on your system. If not, download it from <a href="https://www.python.org/" target="_blank">Python's official site</a>.</p>
 
-title: The book's title.
-author: The author of the book.
-genre: The genre category.
-year: Publication year.
-available: Boolean indicating if the book is currently available.
-Sample Data
-python
-Copy code
-library_books = [
-    {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "genre": "Fiction", "year": 1925, "available": True},
-    {"title": "1984", "author": "George Orwell", "genre": "Dystopian", "year": 1949, "available": True},
-    {"title": "To Kill a Mockingbird", "author": "Harper Lee", "genre": "Fiction", "year": 1960, "available": False},
-    {"title": "The Catcher in the Rye", "author": "J.D. Salinger", "genre": "Fiction", "year": 1951, "available": True},
-    {"title": "Pride and Prejudice", "author": "Jane Austen", "genre": "Romance", "year": 1813, "available": True},
-    {"title": "Moby Dick", "author": "Herman Melville", "genre": "Adventure", "year": 1851, "available": False},
-]
-Functions
-1. count_available_books(books)
-Counts and returns the number of books available in the library.
+    <h3>Steps</h3>
+    <ol>
+        <li>Clone this repository:</li>
+        <pre><code>git clone https://github.com/mairaperveen/library-database-analysis.git
+cd library-database-analysis</code></pre>
+        <li>Run the script:</li>
+        <pre><code>python library_analysis.py</code></pre>
+    </ol>
 
-python
-Copy code
-def count_available_books(books):
-    return sum(book["available"] for book in books)
-2. get_unique_genres(books)
-Extracts and returns a set of unique genres present in the library.
-
-python
-Copy code
-def get_unique_genres(books):
-    return {book["genre"] for book in books}
-3. find_books_by_author(books, author_name)
-Finds and returns a list of book titles by a specified author.
-
-python
-Copy code
-def find_books_by_author(books, author_name):
-    return [book["title"] for book in books if book["author"] == author_name]
-4. count_books_by_year(books)
-Counts and returns a dictionary with the number of books published each year.
-
-python
-Copy code
-def count_books_by_year(books):
-    year_counts = {}
-    for book in books:
-        year = book["year"]
-        if year in year_counts:
-            year_counts[year] += 1
-        else:
-            year_counts[year] = 1
-    return year_counts
-5. find_oldest_book(books)
-Finds and returns the oldest book(s) in the library based on the publication year.
-
-python
-Copy code
-def find_oldest_book(books):
-    oldest_year = min(book["year"] for book in books)
-    return [book["title"] for book in books if book["year"] == oldest_year]
-6. find_newest_book(books)
-Finds and returns the newest book(s) in the library based on the publication year.
-
-python
-Copy code
-def find_newest_book(books):
-    newest_year = max(book["year"] for book in books)
-    return [book["title"] for book in books if book["year"] == newest_year]
-7. filter_books_by_availability(books, is_available)
-Filters and returns a list of available or unavailable books based on the provided Boolean parameter.
-
-python
-Copy code
-def filter_books_by_availability(books, is_available):
-    return [book["title"] for book in books if book["available"] == is_available]
-8. filter_books_by_genre(books, genre)
-Filters and returns a list of books within a specified genre.
-
-python
-Copy code
-def filter_books_by_genre(books, genre):
-    return [book["title"] for book in books if book["genre"] == genre]
-Running the Program
-Clone or download the repository.
-Open a terminal and navigate to the project directory.
-Run the program:
-bash
-Copy code
-python library_analysis.py
-Output
-The program outputs results in the console, including:
-
-The count of available books.
-Unique genres in the library.
-Books by a specified author.
-Count of books by publication year.
-Oldest and newest books.
-Lists of books filtered by availability or genre.
-Sample Output
-yaml
-Copy code
+    <h2>🔍 Example Output</h2>
+    <pre>
 Library Database Analysis
 
 Number of Available Books: 4
@@ -157,11 +136,29 @@ Books in Genre 'Fiction':
 - The Great Gatsby
 - To Kill a Mockingbird
 - The Catcher in the Rye
-Further Enhancements
-To extend this project:
+    </pre>
 
-Add data validation to handle cases of missing or inconsistent data.
-Implement unit tests for each function to ensure accuracy.
-Enhance visualization with a graphical user interface or charting.
-License
-This project is licensed under the MIT License.
+    <h2>🤝 Contributing</h2>
+    <ol>
+        <li>Fork the repository.</li>
+        <li>Create a feature branch:
+        <pre><code>git checkout -b feature/AmazingFeature</code></pre></li>
+        <li>Commit your changes:
+        <pre><code>git commit -m "Add some AmazingFeature"</code></pre></li>
+        <li>Push to the branch:
+        <pre><code>git push origin feature/AmazingFeature</code></pre></li>
+        <li>Open a pull request.</li>
+    </ol>
+
+    <h2>📄 License</h2>
+    <p>This project is licensed under the MIT License. See <code>LICENSE</code> for more information.</p>
+
+    <h2>👨‍💻 Maintainer</h2>
+    <p><b>Maira Perveen</b><br>
+    GitHub: <a href="https://github.com/mairaperveen" target="_blank">@mairaperveen</a><br>
+    Email: maira.perveen25@gmail.com</p>
+
+    <h2>🌟 Show Your Support</h2>
+    <p>If you found this project helpful, give it a ⭐️ and consider sharing it with others!</p>
+</body>
+</html>
